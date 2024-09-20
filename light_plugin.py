@@ -90,8 +90,8 @@ async def main():
     # Add Azure OpenAI chat completion
     chat_completion = AzureChatCompletion(
         deployment_name="gpt-4o",
-        api_key="c6670dbd36374a289f8a39a56e1a839c",
-        endpoint="https://xjxopenai826.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2023-03-15-preview",
+        api_key="your key",
+        endpoint="your endpoint",
     )
     kernel.add_service(chat_completion)
 
