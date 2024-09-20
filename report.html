@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title align="left">Water Quality Management</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Call Example</title>
+</head>
+</head>
+<body>
+  <h1 align="left">Water Quality Management</h1>
+  <h3 align="left">My Active Work Items</h3>
+  </p>
+    <table border="1">
+        <tr>
+        <th>Work Item</th>
+        <th>Asset Name</th>
+        <th>On Timestamp</th>
+        <th>Off Timestamp</th>
+        <th>Work Item Type</th>
+        <th>Severity</th>
+        <th>Serial No.</th>
+        <th>Internal Status</th>
+        <th>External Status</th>
+        <th>ROA</th>
+        </tr>
+        <tr>
+        <td>#12345</td>
+        <td>A0</td>
+        <td>9/17/2024 0:00</td>
+        <td></td>
+        <td>Device Alert</td>
+        <td>Critical</td>
+        <td>2200</td>
+        <td></td>
+        <td id="dataCell"></td>
+        <td><button onclick="callApi(this)">Call API</button></td>
+        </tr>
+    </table>
+    <script>
+        async function callApi(button) {
+          fetch('http://127.0.0.1:5000/v0/phLow', {
+            method: 'GET', // or 'POST' depending on your API
+            headers: {
+                'Content-Type': 'text/html'
+            }
+        })
+        .then(response => response.text())
+        .then(data => {
+          // Assuming the data you get is a simple string or number
+          document.getElementById('dataCell').innerHTML = data;
+      })
+      .catch(error => console.error('Error:', error));
+      }
+    </script>   
+</body>
+</html>
