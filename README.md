@@ -5,6 +5,7 @@ This is to show how we can use Semantic Kernel and its plug-in mechanism to cond
 ## Repo Structure
 This repo has the following parts:
 - light_plugin.py: this is the semantic kernel model to access GTP-4o with a plug-in class CVS which read in all the data we need and conduct the time series correlation analysis.
+- sk_agent_dep_inj.py: this is the semantic kernel based and several commonly used services are injected and used by agent with access to GTP-4o from completion. Compared with plugin approach, DI/Agent give you more control on software stacking and flows of data and work.
 - app.py: a Flask API framework which synchronically calls the main() of light_plugin on binder of a user call.
 - report.html: A user uses this file to call the Flask API to get the ROA report in its External Status column.
 - sensor_config.csv
