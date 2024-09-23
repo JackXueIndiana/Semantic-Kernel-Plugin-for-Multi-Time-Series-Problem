@@ -25,5 +25,6 @@ This repo has the following parts:
 https://www.healthline.com/health/ph-of-drinking-water
 https://www.wikihow.com/Raise-the-pH-of-Water
 https://learn.microsoft.com/en-us/semantic-kernel/concepts/plugins/?pivots=programming-language-python
+https://devblogs.microsoft.com/semantic-kernel/using-semantic-kernel-with-dependency-injection/
 ~~~
 
